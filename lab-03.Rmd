@@ -106,7 +106,6 @@ staff_long <- staff %>%
                       colour = faculty_type)) +
      geom_point()
 
-
 ```
 
 ## Exercise 4
@@ -114,7 +113,8 @@ staff_long <- staff %>%
 ```{r bad-line-plot}
 # Write your code for Exercise 4 here
 
-
+staff_long <- staff_long %>%
+  mutate(year = as.integer(year))
 
 ```
 
