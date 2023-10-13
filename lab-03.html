@@ -402,12 +402,12 @@ format</em> data?</p>
 <h2>Exercise 2</h2>
 <pre class="r"><code>## Uncomment and complete the following code
 
-#staff_long &lt;- ___ %&gt;%
-#  ___(
-#    cols = ____, 
-#    names_to = &quot;_____&quot;,
-#    values_to = &quot;percent&quot;
-#    )</code></pre>
+staff_long &lt;- staff %&gt;%
+  pivot_longer(
+    cols = c(&quot;1975&quot;, &quot;1989&quot;, &quot;1993&quot;, &quot;1995&quot;, &quot;1999&quot;, &quot;2001&quot;, &quot;2003&quot;, &quot;2005&quot;, &quot;2007&quot;, &quot;2009&quot;, &quot;2011&quot;),
+    names_to = &quot;year&quot;,
+    values_to = &quot;percent&quot;
+    )</code></pre>
 </div>
 <div id="exercise-3" class="section level2">
 <h2>Exercise 3</h2>

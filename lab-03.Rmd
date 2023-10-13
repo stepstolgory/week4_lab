@@ -86,12 +86,12 @@ How many observations are there in the data set?
 ```{r pivoting}
 ## Uncomment and complete the following code
 
-#staff_long <- ___ %>%
-#  ___(
-#    cols = ____, 
-#    names_to = "_____",
-#    values_to = "percent"
-#    )
+staff_long <- staff %>%
+  pivot_longer(
+    cols = c("1975", "1989", "1993", "1995", "1999", "2001", "2003", "2005", "2007", "2009", "2011"),
+    names_to = "year",
+    values_to = "percent"
+    )
 
 ```
 
