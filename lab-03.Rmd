@@ -113,8 +113,13 @@ staff_long <- staff %>%
 ```{r bad-line-plot}
 # Write your code for Exercise 4 here
 
-staff_long <- staff_long %>%
-  mutate(year = as.integer(year))
+ ggplot(data = staff_long,
+        mapping = aes(x = year, 
+                      y = percent, 
+                      colour = faculty_type)) +
+  geom_line()
+
+
 
 ```
 
@@ -123,8 +128,14 @@ staff_long <- staff_long %>%
 ```{r mutate-year}
 ## Uncomment and complete the following code
 
-#staff_long <- staff_long %>%
-#  mutate(year = ______(year))
+staff_long <- staff_long %>%
+  mutate(year = as.integer(year))
+
+ggplot(data = staff_long,
+        mapping = aes(x = year, 
+                      y = percent, 
+                      colour = faculty_type)) +
+  geom_line()
 ```
 
 
